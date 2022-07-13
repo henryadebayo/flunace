@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../Consts/colors.dart';
 import '../../Consts/text_styles.dart';
+import '../gMap/google_map_screen.dart';
 
 
 class VerifyNumber extends StatefulWidget {
@@ -39,24 +41,28 @@ class _VerifyNumberState extends State<VerifyNumber> {
                         height: 70.0.h,
                         width: 70.0.w,
                         decoration: BoxDecoration(
-                            color: Colors.grey[300],
+                            color: kLightOrange,
                             borderRadius: BorderRadius.circular(13.0.r)
                         ),
-                        child: Center(child:
+                        child:
+                        Center(child:
                         TextFormField(
+                          inputFormatters: [
+                            LengthLimitingTextInputFormatter(1)
+                          ],
                           decoration: InputDecoration(
-                            filled: true,
+                            hintText: "0",
                             border: InputBorder.none,
-                            fillColor: Colors.transparent,
-                            contentPadding: EdgeInsets.only(left: 50.0.w),
-                            hintStyle: GoogleFonts.inter(color: Colors.black54, fontWeight: FontWeight.bold),
+                            hintStyle:GoogleFonts.inter(color: Colors.black54, fontWeight: FontWeight.bold, fontSize: 50.0),
                           ),
                           keyboardType: TextInputType.number,
-                          style: GoogleFonts.inter(color: Colors.black, fontWeight: FontWeight.bold),
-                          autovalidateMode: AutovalidateMode.onUserInteraction,
-                          validator: (value){
+                          style: GoogleFonts.inter(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 30.0), textAlign: TextAlign.center,
+                          onChanged: (value){
+                            if (value.length == 1){
+                              FocusScope.of(context).nextFocus();
+                            }
                           },
-                          //maxLength: 10,
+
                         )
                         ),
                       ),
@@ -64,24 +70,28 @@ class _VerifyNumberState extends State<VerifyNumber> {
                         height: 70.0.h,
                         width: 70.0.w,
                         decoration: BoxDecoration(
-                            color: Colors.grey[300],
+                            color: kLightOrange,
                             borderRadius: BorderRadius.circular(13.0.r)
                         ),
-                        child: Center(child:
+                        child:
+                        Center(child:
                         TextFormField(
+                          inputFormatters: [
+                            LengthLimitingTextInputFormatter(1)
+                          ],
                           decoration: InputDecoration(
-                            filled: true,
+                            hintText: "0",
                             border: InputBorder.none,
-                            fillColor: Colors.transparent,
-                            contentPadding: EdgeInsets.only(left: 50.0.w),
-                            hintStyle: GoogleFonts.inter(color: Colors.black54, fontWeight: FontWeight.bold),
+                            hintStyle:GoogleFonts.inter(color: Colors.black54, fontWeight: FontWeight.bold, fontSize: 50.0),
                           ),
                           keyboardType: TextInputType.number,
-                          style: GoogleFonts.inter(color: Colors.black, fontWeight: FontWeight.bold),
-                          autovalidateMode: AutovalidateMode.onUserInteraction,
-                          validator: (value){
+                          style: GoogleFonts.inter(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 30.0), textAlign: TextAlign.center,
+                          onChanged: (value){
+                            if (value.length == 1){
+                              FocusScope.of(context).nextFocus();
+                            }
                           },
-                          //maxLength: 10,
+
                         )
                         ),
                       ),
@@ -89,24 +99,28 @@ class _VerifyNumberState extends State<VerifyNumber> {
                         height: 70.0.h,
                         width: 70.0.w,
                         decoration: BoxDecoration(
-                            color: Colors.grey[300],
+                            color: kLightOrange,
                             borderRadius: BorderRadius.circular(13.0.r)
                         ),
-                        child: Center(child:
+                        child:
+                        Center(child:
                         TextFormField(
+                          inputFormatters: [
+                            LengthLimitingTextInputFormatter(1)
+                          ],
                           decoration: InputDecoration(
-                            filled: true,
+                            hintText: "0",
                             border: InputBorder.none,
-                            fillColor: Colors.transparent,
-                            contentPadding: EdgeInsets.only(left: 50.0.w),
-                            hintStyle: GoogleFonts.inter(color: Colors.black54, fontWeight: FontWeight.bold),
+                            hintStyle:GoogleFonts.inter(color: Colors.black54, fontWeight: FontWeight.bold, fontSize: 50.0),
                           ),
                           keyboardType: TextInputType.number,
-                          style: GoogleFonts.inter(color: Colors.black, fontWeight: FontWeight.bold),
-                          autovalidateMode: AutovalidateMode.onUserInteraction,
-                          validator: (value){
+                          style: GoogleFonts.inter(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 30.0), textAlign: TextAlign.center,
+                          onChanged: (value){
+                            if (value.length == 1){
+                              FocusScope.of(context).nextFocus();
+                            }
                           },
-                          //maxLength: 10,
+
                         )
                         ),
                       ),
@@ -114,30 +128,35 @@ class _VerifyNumberState extends State<VerifyNumber> {
                         height: 70.0.h,
                         width: 70.0.w,
                         decoration: BoxDecoration(
-                            color: Colors.grey[300],
+                            color: kLightOrange,
                             borderRadius: BorderRadius.circular(13.0.r)
                         ),
-                        child: Center(child:
+                        child:
+                        Center(child:
                         TextFormField(
+                          inputFormatters: [
+                            LengthLimitingTextInputFormatter(1)
+                          ],
                           decoration: InputDecoration(
-                            filled: true,
+                            hintText: "0",
                             border: InputBorder.none,
-                            fillColor: Colors.transparent,
-                            contentPadding: EdgeInsets.only(left: 50.0.w),
-                            hintStyle: GoogleFonts.inter(color: Colors.black54, fontWeight: FontWeight.bold),
+                            hintStyle:GoogleFonts.inter(color: Colors.black54, fontWeight: FontWeight.bold, fontSize: 50.0),
                           ),
                           keyboardType: TextInputType.number,
-                          style: GoogleFonts.inter(color: Colors.black, fontWeight: FontWeight.bold),
-                          autovalidateMode: AutovalidateMode.onUserInteraction,
-                          validator: (value){
+                          style: GoogleFonts.inter(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 30.0), textAlign: TextAlign.center,
+                          onChanged: (value){
+                            if (value.length == 1){
+                              FocusScope.of(context).nextFocus();
+                            }
                           },
-                          //maxLength: 10,
+
                         )
                         ),
                       ),
                     ],
                   ),
                 ),
+                //AIzaSyCqv2b8vhxvSkqzaWLLhbVLF0IZ0p-Nzuw
                 Padding(
                   padding:  EdgeInsets.only(left: 20.0, right: 20.0, top: 90.0),
                   child: SizedBox(
@@ -147,7 +166,7 @@ class _VerifyNumberState extends State<VerifyNumber> {
                     TextButton(
                       onPressed: () {
                         Navigator.of(context).push(MaterialPageRoute(builder: (ctx){
-                          return VerifyNumber();
+                          return const GoogleMapScreen();
                         }));
                       },
                       child:  Text("Next", style:kSemiBoldObWhiteTextStyle.copyWith(fontSize: 18.0) ),
