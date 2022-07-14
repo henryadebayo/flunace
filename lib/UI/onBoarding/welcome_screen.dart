@@ -2,6 +2,7 @@ import 'package:flunace/Consts/colors.dart';
 import 'package:flunace/Consts/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:geolocator/geolocator.dart';
 
 import 'create_account.dart';
 
@@ -13,6 +14,19 @@ class WelcomeScreen extends StatefulWidget {
 }
 
 class _WelcomeScreenState extends State<WelcomeScreen> {
+
+
+  void getLocation()async{
+    Position position = await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
+    print(position.longitude);
+    print(position.latitude);
+  }
+
+  @override
+  void initState() {
+    getLocation();
+    super.initState();
+  }
 
   //var height = MediaQuery.of(context).size.height,
 

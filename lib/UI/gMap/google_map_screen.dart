@@ -1,3 +1,4 @@
+import 'package:flunace/UI/bottomNavigation/bottom_navigation_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -14,8 +15,8 @@ class GoogleMapScreen extends StatefulWidget {
 }
 
 class _GoogleMapScreenState extends State<GoogleMapScreen> {
-  static const _initialCamPos = CameraPosition(target: LatLng(37.773972, -122.431297),
-    zoom: 11.5,
+  static const _initialCamPos = CameraPosition(target: LatLng(11.9883259, 8.4820171),
+    zoom: 16,
   );
   @override
   Widget build(BuildContext context) {
@@ -23,6 +24,7 @@ class _GoogleMapScreenState extends State<GoogleMapScreen> {
       body: Stack(
         children:[ GoogleMap(
           initialCameraPosition: _initialCamPos,
+          zoomControlsEnabled: false,
         ),
           SafeArea(
             child:
@@ -63,9 +65,9 @@ class _GoogleMapScreenState extends State<GoogleMapScreen> {
                     width: double.infinity,
                     child: TextButton(
                       onPressed: () {
-                        // Navigator.of(context).push(MaterialPageRoute(builder: (ctx){
-                        //   return const GoogleMapScreen();
-                        // }));
+                        Navigator.of(context).push(MaterialPageRoute(builder: (ctx){
+                          return const BottomNavigationScreen();
+                        }));
                       },
                       child:  Text("Pick Location", style:kSemiBoldObWhiteTextStyle.copyWith(fontSize: 18.0) ),
                       style: ButtonStyle(
