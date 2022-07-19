@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import '../cartScreen/cart_screen.dart';
 import '../historyScreen/history_screen.dart';
-import '../homeScreen/home_screen.dart';
+import '../homeScreen/explore_screen.dart';
 import '../settingsScreen/settings_screen.dart';
 import '../storeScreen/store_screen.dart';
 
@@ -20,7 +20,7 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
   int _currentIndex = 2;
 
   final List<Widget> _pages= [
-    const HomeScreen(),
+    const ExploreScreen(),
     const HistoryScreen(),
     const StoreScreen(),
     const CartScreen(),
@@ -30,9 +30,11 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.transparent,
       body: _pages[_currentIndex],
 
       bottomNavigationBar:  CurvedNavigationBar(
+        index: 2,
         height: 50.0,
         buttonBackgroundColor: kMainOrange,
         backgroundColor: Colors.transparent,
@@ -43,7 +45,6 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
           Icon(Icons.shopping_cart,),
           Icon(Icons.settings),
         ],
-
         onTap: (index) => setState(() => _currentIndex = index),
         //other params
       ),

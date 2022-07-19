@@ -2,19 +2,19 @@ import 'package:flutter/material.dart';
 
 import '../../Consts/text_styles.dart';
 
-class SettingsScreen extends StatefulWidget {
-  const SettingsScreen({Key? key}) : super(key: key);
+class ExploreScreen extends StatefulWidget {
+  const ExploreScreen({Key? key}) : super(key: key);
 
   @override
-  State<SettingsScreen> createState() => _SettingsScreenState();
+  State<ExploreScreen> createState() => _ExploreScreenState();
 }
 
-class _SettingsScreenState extends State<SettingsScreen> {
+class _ExploreScreenState extends State<ExploreScreen> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: AppBar(
-        title: Text("Settings", style: kBoldWhiteTextStyle.copyWith(color: Colors.black, fontSize: 20.0),),
+        title: Text("Explore Flunace", style: kBoldWhiteTextStyle.copyWith(color: Colors.black, fontSize: 20.0),),
         centerTitle: true,
         elevation: 0.5,
         backgroundColor: Colors.white,
