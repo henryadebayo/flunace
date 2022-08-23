@@ -1,5 +1,4 @@
 import 'package:flunace/Consts/colors.dart';
-import 'package:flunace/Consts/text_styles.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

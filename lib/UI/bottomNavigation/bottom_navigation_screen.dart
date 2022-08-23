@@ -1,13 +1,11 @@
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flunace/Consts/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import '../cartScreen/cart_screen.dart';
 import '../historyScreen/history_screen.dart';
 import '../homeScreen/explore_screen.dart';
 import '../settingsScreen/settings_screen.dart';
 import '../storeScreen/store_screen.dart';
-
-
 
 class BottomNavigationScreen extends StatefulWidget {
   const BottomNavigationScreen({Key? key}) : super(key: key);
@@ -19,7 +17,7 @@ class BottomNavigationScreen extends StatefulWidget {
 class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
   int _currentIndex = 2;
 
-  final List<Widget> _pages= [
+  final List<Widget> _pages = [
     const ExploreScreen(),
     const HistoryScreen(),
     const StoreScreen(),
@@ -32,17 +30,24 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
     return Scaffold(
       backgroundColor: Colors.transparent,
       body: _pages[_currentIndex],
-
-      bottomNavigationBar:  CurvedNavigationBar(
+      bottomNavigationBar: CurvedNavigationBar(
         index: 2,
         height: 50.0,
         buttonBackgroundColor: kMainOrange,
         backgroundColor: Colors.transparent,
-        items: [
-          Icon(Icons.explore,),
-          Icon(Icons.receipt,),
-          Icon(Icons.storefront,),
-          Icon(Icons.shopping_cart,),
+        items: const [
+          Icon(
+            Icons.explore,
+          ),
+          Icon(
+            Icons.receipt,
+          ),
+          Icon(
+            Icons.storefront,
+          ),
+          Icon(
+            Icons.shopping_cart,
+          ),
           Icon(Icons.settings),
         ],
         onTap: (index) => setState(() => _currentIndex = index),
