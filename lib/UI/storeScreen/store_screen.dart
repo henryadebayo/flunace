@@ -26,7 +26,7 @@ class _StoreScreenState extends State<StoreScreen> {
                 children: [
                   IconButton(
                       onPressed: () {},
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.view_headline,
                         size: 40.0,
                       )),
@@ -45,7 +45,7 @@ class _StoreScreenState extends State<StoreScreen> {
                     child: Center(
                       child: IconButton(
                           onPressed: () {},
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.notifications,
                             color: kMainOrange,
                           )),
@@ -72,11 +72,31 @@ class _StoreScreenState extends State<StoreScreen> {
                 ),
               ),
               Expanded(
-                  child: ListView.builder(
-                      itemCount: 50,
-                      itemBuilder: (ctx, int index) {
-                        return const OnlineStoreCard();
-                      }))
+                child: ListView.builder(
+                    itemCount: 50,
+                    itemBuilder: (ctx, int index) {
+                      return Padding(
+                        padding: EdgeInsets.only(bottom: 8.0.h),
+                        child: Container(
+                          height: 79.0.h,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10.0.r),
+                            color: const Color(0xffF2F3F2),
+                          ),
+                          child: Padding(
+                            padding: EdgeInsets.only(top: 30.0.h, left: 24.0.w),
+                            child: Text(
+                              "Groceries Stores",
+                              style: kSemiBoldWhiteTextStyle.copyWith(
+                                fontSize: 14.0.sp,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ),
+                        ),
+                      );
+                    }),
+              ),
             ],
           ),
         ),
@@ -98,7 +118,7 @@ class OnlineStoreCard extends StatelessWidget {
         height: 115.0.h,
         decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage("assets/images/store.png"),
+              image: const AssetImage("assets/images/store.png"),
               fit: BoxFit.cover,
               colorFilter: ColorFilter.mode(
                 Colors.black.withOpacity(0.5),
@@ -117,7 +137,7 @@ class OnlineStoreCard extends StatelessWidget {
               ),
               Wrap(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.directions_walk,
                     color: Colors.white,
                   ),
